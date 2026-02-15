@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>タイ語単語カード学習ツール</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>タイ語学習ツール</h1>
+      <p>タイ文字＋発音（アルファベット）⇔日本語訳の単語カードと文章問題で学習します。</p>
+    </header>
+
+    <main>
+      <section class="panel">
+        <h2>単語カード</h2>
+        <div class="card" id="flashcard" aria-live="polite">
+          <img id="word-image" src="" alt="" />
+          <div class="card-content">
+            <p class="thai" id="thai-word"></p>
+            <p class="romanization" id="romanization"></p>
+            <p class="japanese" id="japanese-word"></p>
+          </div>
+        </div>
+        <div class="controls">
+          <button id="prev-btn">前へ</button>
+          <button id="flip-btn">表/裏を切り替え</button>
+          <button id="next-btn">次へ</button>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>文章問題（穴埋め）</h2>
+        <div id="sentence-quiz"></div>
+        <div class="controls">
+          <button id="check-btn">答え合わせ</button>
+          <button id="next-question-btn">次の問題</button>
+        </div>
+        <p id="quiz-result" class="result"></p>
+      </section>
+    </main>
+
+    <footer>
+      <small>※画像は学習目的のイメージとして表示しています。</small>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
